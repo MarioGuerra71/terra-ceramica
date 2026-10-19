@@ -1,5 +1,7 @@
 # Terra · tienda de cerámica con historia en 3D
 
+**Código:** https://github.com/MarioGuerra71/terra-ceramica
+
 Tienda online de un taller de cerámica **ficticio** de Sevilla, hecha como pieza de portfolio. Piezas, precios, taller y pedidos son inventados, y el pago es simulado.
 
 ## La idea

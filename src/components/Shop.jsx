@@ -178,14 +178,14 @@ export function ProductDialog({ product, onClose, onAdd }) {
             <button type="button" onClick={() => ref.current.close()} className="absolute right-4 top-4 grid size-11 cursor-pointer place-items-center rounded-full hover:bg-ink/5" aria-label="Cerrar">
               <CloseIcon />
             </button>
-            <p className="flex items-center gap-2 text-sm text-ink-soft">
-              <span className={`swatch-${product.glaze} size-3.5 rounded-full ring-1 ring-inset ring-ink/15`} aria-hidden="true" />
-              Esmalte {GLAZES[product.glaze].label.toLowerCase()} · {CATEGORIES[product.category]}
-            </p>
-            <h2 id="pd-title" className="mt-2 pr-10 text-3xl font-semibold tracking-[-0.025em]">
+            <h2 id="pd-title" className="pr-10 text-3xl font-semibold tracking-[-0.025em]">
               {product.name}
             </h2>
             <p className="mt-2 text-xl tabular-nums">{formatPrice(price)}</p>
+            <p className="mt-3 flex items-center gap-2 text-sm text-ink-soft">
+              <span className={`swatch-${product.glaze} size-3.5 rounded-full ring-1 ring-inset ring-ink/15`} aria-hidden="true" />
+              Esmalte {GLAZES[product.glaze].label.toLowerCase()} · {CATEGORIES[product.category]}
+            </p>
             <p className="mt-5 text-ink-soft">{product.description}</p>
             <ul className="mt-5 space-y-1.5 border-t border-line pt-5 text-sm">
               {product.details.map((d) => (

@@ -4,7 +4,7 @@ import { ArrowDownIcon, ArrowRightIcon } from "./icons.jsx";
 
 // Fondo de cada fase. Cada panel lleva el suyo, así el contraste es correcto aunque no haya JavaScript,
 // y al hacer scroll el fondo de la fase siguiente barre al anterior por detrás del jarrón.
-const STAGE_BG = ["bg-[#decbba]", "bg-[#e8e1d6]", "bg-[#cfd6c6]", "bg-kiln", "bg-bone"];
+const STAGE_BG = ["bg-[#decbba]", "bg-[#e8e1d6]", "bg-[#cfd6c6]", "stage-kiln", "bg-bone"];
 
 const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -45,7 +45,7 @@ export default function Story({ glaze, onGlaze, onShowGlaze }) {
     const layout = () => {
       const desktop = window.matchMedia("(min-width: 64rem)").matches;
       // En móvil el jarrón sube y se reduce para dejar la mitad de abajo al texto
-      sceneRef.current?.setOffset(desktop ? 0.2 : 0, desktop ? 0 : 0.2, desktop ? 1 : 0.66);
+      sceneRef.current?.setOffset(desktop ? 0.2 : 0, desktop ? 0 : 0.19, desktop ? 1 : 0.55);
       paint();
     };
 

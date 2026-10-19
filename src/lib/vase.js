@@ -127,10 +127,19 @@ export function createVaseScene(canvas) {
     const { clientWidth: w, clientHeight: h } = canvas;
     if (!w || !h) return;
     renderer.setSize(w, h, false);
+    updateView();
+  }
+
+  /** Encuadre de la cámara (sin tocar el tamaño del canvas, que es caro). */
+  function updateView() {
+    const { clientWidth: w, clientHeight: h } = canvas;
+    if (!w || !h) return;
     camera.aspect = w / h;
     camera.zoom = state.zoom;
     // En escritorio el jarrón se desplaza a la derecha para dejar sitio al texto; en móvil, hacia arriba
-    camera.setViewOffset(w, h, -state.offsetX * w, state.offsetY * h, w, h);
+    // La bola, más baja, sube un poco más que el jarrón terminado (solo en móvil, donde hay offsetY)
+    const lift = state.offsetY ? (1 - range(state.p, 0.08, 0.4)) * 0.09 : 0;
+    camera.setViewOffset(w, h, -state.offsetX * w, (state.offsetY + lift) * h, w, h);
     camera.updateProjectionMatrix();
   }
 
@@ -140,6 +149,7 @@ export function createVaseScene(canvas) {
     state.glaze = glazeHex;
     const form = range(p, 0.08, 0.4);
     if (Math.abs(form - lastForm) > 0.0005) {
+      if (state.offsetY) updateView();
       vase.geometry.dispose();
       vase.geometry = new THREE.LatheGeometry(profileAt(form), 120);
       lastForm = form;
@@ -158,8 +168,8 @@ export function createVaseScene(canvas) {
     const kiln = range(p, 0.63, 0.72) * (1 - range(p, 0.8, 0.88));
     material.emissiveIntensity = kiln * 0.9;
 
-    // Al final el jarrón "sale" del torno: el plato baja y se desvanece
-    const out = smooth(range(p, 0.88, 0.99));
+    // Tras el esmalte el jarrón "sale" del torno: el plato baja y se desvanece antes de entrar al horno
+    const out = smooth(range(p, 0.55, 0.68));
     wheel.position.y = -out * 1.2;
     wheel.visible = out < 0.99;
     plate.material.opacity = base.material.opacity = 1 - out;

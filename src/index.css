@@ -45,24 +45,46 @@
     outline-offset: 3px;
   }
 
-  /* Fondos de la historia. Cada fase arranca con el color de la anterior y funde al suyo en el
-     primer quinto de la pantalla: el cambio se ve como un lavado detrás del jarrón, no como un corte. */
+  /* Fondos de la historia: cada fase es un color sólido. El fundido vive en la frontera entre dos
+     fases (un 14 % de pantalla a caballo entre ambas), así en reposo cada fase ocupa la pantalla entera. */
   .stage-0 { background: #decbba; }
-  .stage-1 { background: linear-gradient(#decbba, #e8e1d6 22svh); }
-  .stage-2 { background: linear-gradient(#e8e1d6, #cfd6c6 22svh); }
+  .stage-1 { background: #e8e1d6; --from: #decbba; --to: #e8e1d6; }
+  .stage-2 { background: #cfd6c6; --from: #e8e1d6; --to: #cfd6c6; }
   .stage-3 {
+    --from: #cfd6c6;
+    --to: var(--color-kiln);
     background:
       radial-gradient(120% 60% at 72% 100%, rgb(150 58 18 / 0.55), transparent 62%),
       radial-gradient(60% 40% at 72% 92%, rgb(232 120 48 / 0.35), transparent 70%),
-      linear-gradient(#cfd6c6, var(--color-kiln) 26svh);
+      var(--color-kiln);
   }
-  .stage-4 { background: linear-gradient(var(--color-kiln), var(--color-bone) 26svh); }
+  .stage-4 { background: var(--color-bone); --from: var(--color-kiln); --to: var(--color-bone); }
+
+  .stage-1,
+  .stage-2,
+  .stage-3,
+  .stage-4 {
+    position: relative;
+  }
+
+  .stage-1::before,
+  .stage-2::before,
+  .stage-3::before,
+  .stage-4::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: -7svh;
+    height: 14svh;
+    background: linear-gradient(var(--from), var(--to));
+    pointer-events: none;
+  }
 
   @media (max-width: 63.99rem) {
     .stage-3 {
       background:
         radial-gradient(130% 50% at 50% 62%, rgb(150 58 18 / 0.5), transparent 65%),
-        linear-gradient(#cfd6c6, var(--color-kiln) 26svh);
+        var(--color-kiln);
     }
   }
 

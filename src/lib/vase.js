@@ -211,6 +211,8 @@ export function createVaseScene(canvas) {
     plinth.visible = rest > 0;
     plinth.material.opacity = rest;
     plinth.position.y = -0.08 - (1 - rest) * 0.35;
+    // Sobre la peana la sombra se ciñe a su superficie (sin caer al vacío por los lados)
+    shadow.scale.setScalar(1 - 0.32 * rest);
 
     renderer.render(scene, camera);
   }

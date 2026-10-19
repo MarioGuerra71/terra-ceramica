@@ -35,9 +35,10 @@ export default function Story({ glaze, onGlaze, onShowGlaze }) {
       // Cabecera clara mientras pasa por encima de algo oscuro: el horno y el arranque de la fase
       // siguiente, que funde desde el negro del horno durante su primer cuarto de pantalla
       const kiln = document.getElementById("horno").getBoundingClientRect();
-      // El horno arranca fundiendo desde la salvia: solo es oscuro pasado su primer octavo
+      // Oscuro de verdad: dentro del horno pasado su fundido de entrada (7 % de pantalla) y hasta
+      // la mitad del fundido de salida hacia la mesa
       const vh = window.innerHeight;
-      const dark = 28 - kiln.top > vh * 0.12 && kiln.bottom + vh * 0.14 > 28;
+      const dark = 28 - kiln.top > vh * 0.07 && kiln.bottom + vh * 0.035 > 28;
       document.documentElement.classList.toggle("chrome-dark", dark);
       // Con movimiento reducido el jarrón se queda terminado y quieto
       sceneRef.current?.render(reduce ? 1 : p, glazeRef.current);

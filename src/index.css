@@ -45,24 +45,51 @@
     outline-offset: 3px;
   }
 
-  .stage-kiln {
+  /* Fondos de la historia. Cada fase arranca con el color de la anterior y funde al suyo en el
+     primer quinto de la pantalla: el cambio se ve como un lavado detrás del jarrón, no como un corte. */
+  .stage-0 { background: #decbba; }
+  .stage-1 { background: linear-gradient(#decbba, #e8e1d6 22svh); }
+  .stage-2 { background: linear-gradient(#e8e1d6, #cfd6c6 22svh); }
+  .stage-3 {
     background:
       radial-gradient(120% 60% at 72% 100%, rgb(150 58 18 / 0.55), transparent 62%),
       radial-gradient(60% 40% at 72% 92%, rgb(232 120 48 / 0.35), transparent 70%),
-      var(--color-kiln);
+      linear-gradient(#cfd6c6, var(--color-kiln) 26svh);
   }
+  .stage-4 { background: linear-gradient(var(--color-kiln), var(--color-bone) 26svh); }
 
   @media (max-width: 63.99rem) {
-    .stage-kiln {
+    .stage-3 {
       background:
         radial-gradient(130% 50% at 50% 62%, rgb(150 58 18 / 0.5), transparent 65%),
-        var(--color-kiln);
+        linear-gradient(#cfd6c6, var(--color-kiln) 26svh);
+    }
+  }
+
+  /* El texto de cada fase se desvanece antes de pasar por debajo de la cabecera (escritorio)
+     o del jarrón (móvil), para que nunca quede tapado a medias */
+  @supports (animation-timeline: view()) {
+    .panel-copy {
+      animation: copy-exit linear both;
+      animation-timeline: view(block 9% 0%);
+      animation-range: exit 0% exit 70%;
+    }
+
+    @media (max-width: 63.99rem) {
+      .panel-copy {
+        animation-timeline: view(block 52% 0%);
+      }
+    }
+  }
+
+  @keyframes copy-exit {
+    to {
+      opacity: 0;
     }
   }
 
   .chrome-solid .chrome {
-    background: rgb(243 240 234 / 0.86);
-    backdrop-filter: blur(14px);
+    background: var(--color-bone);
     box-shadow: 0 1px 0 var(--color-line);
   }
 

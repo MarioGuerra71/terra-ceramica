@@ -71,7 +71,7 @@ export default function App() {
         Saltar a la colección
       </a>
 
-      <header className="chrome fixed inset-x-0 top-0 z-40 flex h-14 items-center justify-between px-5 backdrop-blur-xl transition-colors duration-300 sm:px-10">
+      <header className="chrome fixed inset-x-0 top-0 z-40 flex h-14 items-center justify-between px-5 transition-colors duration-300 sm:px-10">
         <a href="#" className="text-lg font-semibold tracking-[-0.03em]" aria-label="Terra, inicio">
           terra
         </a>
@@ -85,7 +85,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => setPanel("cart")}
-            className="relative flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-paper/80 px-4 ring-1 ring-ink/10 backdrop-blur-sm hover:bg-paper"
+            className="relative flex min-h-11 cursor-pointer items-center gap-2 rounded-full bg-paper px-4 ring-1 ring-ink/10 hover:bg-bone"
             aria-label={`Carrito, ${count} ${count === 1 ? "pieza" : "piezas"}`}
           >
             <BagIcon size={18} />

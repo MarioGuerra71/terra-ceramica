@@ -6,7 +6,7 @@ const N = 64; // puntos del perfil
 
 // Fases del torno: bola centrada → paredes subidas → jarrón con panza y cuello
 const KEYS = [
-  [[0, 0], [0.86, 0.02], [0.98, 0.24], [0.9, 0.55], [0.62, 0.82], [0.26, 0.96], [0.02, 0.99]],
+  [[0, 0], [0.92, 0.02], [1.02, 0.2], [0.94, 0.46], [0.68, 0.7], [0.3, 0.84], [0.02, 0.86]],
   [[0, 0], [0.62, 0.02], [0.64, 0.6], [0.62, 1.3], [0.58, 1.9], [0.6, 2.15]],
   [[0, 0], [0.5, 0.02], [0.82, 0.5], [0.95, 0.98], [0.8, 1.55], [0.43, 2.07], [0.33, 2.36], [0.42, 2.62]],
 ];
@@ -29,6 +29,28 @@ function profileAt(form) {
   const a = SAMPLED[seg];
   const b = SAMPLED[seg + 1];
   return a.map((pa, i) => new THREE.Vector2(pa.x + (b[i].x - pa.x) * t, pa.y + (b[i].y - pa.y) * t));
+}
+
+/**
+ * Jarrón para un instante de torneado. Al principio el barro está amasado a mano: se deforma con un ruido
+ * suave que desaparece en cuanto el torno lo centra (form ≈ 0,3).
+ */
+function vaseGeometry(form) {
+  const geo = new THREE.LatheGeometry(profileAt(form), 120);
+  const amp = 0.08 * (1 - clamp01(form / 0.3)) ** 2;
+  if (amp > 0) {
+    const pos = geo.attributes.position;
+    for (let i = 0; i < pos.count; i++) {
+      const x = pos.getX(i);
+      const y = pos.getY(i);
+      const z = pos.getZ(i);
+      const a = Math.atan2(z, x);
+      const k = 1 + amp * (0.55 * Math.sin(3 * a + 1.3 * y) + 0.35 * Math.sin(5 * a - 2.1 * y + 0.7) + 0.25 * Math.sin(2 * a + 4 * y));
+      pos.setXYZ(i, x * k, y * (1 - amp * 0.6 * (0.5 + 0.5 * Math.sin(2 * a))), z * k);
+    }
+    geo.computeVertexNormals();
+  }
+  return geo;
 }
 
 /** Textura de las "líneas de torno": anillos finos que deja el dedo al subir el barro. */
@@ -110,13 +132,21 @@ export function createVaseScene(canvas) {
     roughness: 0.92,
     metalness: 0,
     bumpMap: lines,
-    bumpScale: 0.6,
+    bumpScale: 0,
     side: THREE.DoubleSide,
     emissive: 0xff6a1a,
     emissiveIntensity: 0,
   });
-  const vase = new THREE.Mesh(new THREE.LatheGeometry(profileAt(0), 120), material);
+  const vase = new THREE.Mesh(vaseGeometry(0), material);
   scene.add(vase);
+
+  // Peana de piedra donde se posa el jarrón al final (la "mesa" que da paso a la tienda)
+  const plinth = new THREE.Mesh(
+    new THREE.BoxGeometry(2.4, 0.16, 2.4),
+    new THREE.MeshStandardMaterial({ color: 0xd2ccc1, roughness: 0.95, transparent: true, opacity: 0 }),
+  );
+  plinth.visible = false;
+  scene.add(plinth);
 
   const raw = new THREE.Color(0x9b6a4d); // barro húmedo
   const glaze = new THREE.Color(0xe7e1d4);
@@ -151,7 +181,7 @@ export function createVaseScene(canvas) {
     if (Math.abs(form - lastForm) > 0.0005) {
       if (state.offsetY) updateView();
       vase.geometry.dispose();
-      vase.geometry = new THREE.LatheGeometry(profileAt(form), 120);
+      vase.geometry = vaseGeometry(form);
       lastForm = form;
     }
     // El torno gira con el scroll: rápido al tornear, despacio al final
@@ -161,7 +191,9 @@ export function createVaseScene(canvas) {
 
     glaze.set(glazeHex);
     material.color.copy(raw).lerp(glaze, smooth(range(p, 0.4, 0.55)));
-    material.bumpScale = 0.6 * (1 - range(p, 0.4, 0.55)) + 0.08;
+    // Las líneas del torno aparecen al tornear y quedan casi borradas bajo el esmalte
+    const glazed = range(p, 0.4, 0.55);
+    material.bumpScale = 0.6 * range(p, 0.1, 0.24) * (1 - glazed) + 0.08 * glazed;
     material.roughness = 0.92 - 0.12 * range(p, 0.7, 0.85);
 
     // Horno: el brillo sube y baja alrededor del panel 4 (p = 0,75)
@@ -174,6 +206,11 @@ export function createVaseScene(canvas) {
     wheel.visible = out < 0.99;
     plate.material.opacity = base.material.opacity = 1 - out;
     plate.material.transparent = base.material.transparent = out > 0;
+
+    const rest = smooth(range(p, 0.86, 0.96));
+    plinth.visible = rest > 0;
+    plinth.material.opacity = rest;
+    plinth.position.y = -0.08 - (1 - rest) * 0.35;
 
     renderer.render(scene, camera);
   }

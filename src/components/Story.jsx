@@ -4,7 +4,7 @@ import { ArrowDownIcon, ArrowRightIcon } from "./icons.jsx";
 
 // Fondo de cada fase. Cada panel lleva el suyo, así el contraste es correcto aunque no haya JavaScript,
 // y al hacer scroll el fondo de la fase siguiente barre al anterior por detrás del jarrón.
-const STAGE_BG = ["bg-[#decbba]", "bg-[#e8e1d6]", "bg-[#cfd6c6]", "stage-kiln", "bg-bone"];
+const STAGE_BG = ["stage-0", "stage-1", "stage-2", "stage-3", "stage-4"];
 
 const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -32,9 +32,11 @@ export default function Story({ glaze, onGlaze, onShowGlaze }) {
     const paint = () => {
       frame = 0;
       const p = progress();
-      // Cabecera clara mientras el horno (fondo oscuro) pasa por debajo de ella
+      // Cabecera clara mientras pasa por encima de algo oscuro: el horno y el arranque de la fase
+      // siguiente, que funde desde el negro del horno durante su primer cuarto de pantalla
       const kiln = document.getElementById("horno").getBoundingClientRect();
-      document.documentElement.classList.toggle("chrome-dark", kiln.top <= 28 && kiln.bottom > 28);
+      const darkUntil = kiln.bottom + window.innerHeight * 0.14;
+      document.documentElement.classList.toggle("chrome-dark", kiln.top <= 28 && darkUntil > 28);
       // Con movimiento reducido el jarrón se queda terminado y quieto
       sceneRef.current?.render(reduce ? 1 : p, glazeRef.current);
     };
@@ -193,7 +195,7 @@ function Panel({ children, id, stage, dark = false }) {
       id={id}
       className={`${STAGE_BG[stage]} flex min-h-svh items-end px-5 pb-[9svh] pt-[52svh] sm:px-10 lg:items-center lg:px-[max(2.5rem,calc((100vw-80rem)/2))] lg:py-0 ${dark ? "on-dark text-bone" : "text-ink"}`}
     >
-      <div className="max-w-xl">
+      <div className="panel-copy max-w-xl">
         {children}
       </div>
     </div>

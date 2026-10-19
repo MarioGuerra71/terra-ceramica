@@ -1,0 +1,560 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T13:40:24.362Z",
+  "title": "Design System: Terra",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Workshop Ink",
+        "canonical": "#1b1a17",
+        "tonalRamp": [
+          "#0c0b08",
+          "#252421",
+          "#41403c",
+          "#5f5d5a",
+          "#81807c",
+          "#a6a4a0",
+          "#cccac6",
+          "#f0eeea"
+        ]
+      },
+      "ink-hover": {
+        "role": "primary",
+        "displayName": "Warm Charcoal",
+        "canonical": "#34312c",
+        "tonalRamp": [
+          "#0d0b07",
+          "#26241f",
+          "#423f3a",
+          "#605d58",
+          "#83807a",
+          "#a8a49e",
+          "#cecac4",
+          "#f2eee7"
+        ]
+      },
+      "clay": {
+        "role": "secondary",
+        "displayName": "Wet Clay",
+        "canonical": "#9b6a4d",
+        "tonalRamp": [
+          "#200000",
+          "#3f1600",
+          "#5f3316",
+          "#805134",
+          "#a57356",
+          "#cc9779",
+          "#f3bd9e",
+          "#ffe2c3"
+        ]
+      },
+      "kiln": {
+        "role": "secondary",
+        "displayName": "Kiln Black",
+        "canonical": "#16110e",
+        "tonalRamp": [
+          "#0f0a07",
+          "#28231f",
+          "#443e3b",
+          "#635c58",
+          "#857f7b",
+          "#aaa39f",
+          "#d0c9c4",
+          "#f4ede8"
+        ]
+      },
+      "stage-clay": {
+        "role": "tertiary",
+        "displayName": "Raw Clay Ground",
+        "canonical": "#decbba",
+        "tonalRamp": [
+          "#140801",
+          "#2f2113",
+          "#4c3c2e",
+          "#6b5a4b",
+          "#8e7d6d",
+          "#b3a191",
+          "#dac7b6",
+          "#feebd9"
+        ]
+      },
+      "stage-slip": {
+        "role": "tertiary",
+        "displayName": "Wheel Slip Ground",
+        "canonical": "#e8e1d6",
+        "tonalRamp": [
+          "#0f0a04",
+          "#28231b",
+          "#443f36",
+          "#635d53",
+          "#867f75",
+          "#aaa499",
+          "#d0cabf",
+          "#f5ede2"
+        ]
+      },
+      "stage-glaze": {
+        "role": "tertiary",
+        "displayName": "Sage Glaze Ground",
+        "canonical": "#cfd6c6",
+        "tonalRamp": [
+          "#090d04",
+          "#21261a",
+          "#3d4235",
+          "#5a6052",
+          "#7d8374",
+          "#a1a798",
+          "#c7cdbe",
+          "#eaf2e1"
+        ]
+      },
+      "glaze-hueso": {
+        "role": "tertiary",
+        "displayName": "Hueso Glaze",
+        "canonical": "#e7e1d4",
+        "tonalRamp": [
+          "#0f0b04",
+          "#28241a",
+          "#443f35",
+          "#625d52",
+          "#858074",
+          "#aaa498",
+          "#d0cabd",
+          "#f4eee1"
+        ]
+      },
+      "glaze-piedra": {
+        "role": "tertiary",
+        "displayName": "Piedra Glaze",
+        "canonical": "#a7a196",
+        "tonalRamp": [
+          "#0f0a04",
+          "#28231b",
+          "#443f36",
+          "#625d53",
+          "#857f75",
+          "#aaa499",
+          "#d0cabe",
+          "#f4eee2"
+        ]
+      },
+      "glaze-salvia": {
+        "role": "tertiary",
+        "displayName": "Salvia Glaze",
+        "canonical": "#8d9d7f",
+        "tonalRamp": [
+          "#050f00",
+          "#1c280f",
+          "#37452a",
+          "#556347",
+          "#778669",
+          "#9bab8d",
+          "#c0d1b2",
+          "#e4f5d5"
+        ]
+      },
+      "glaze-arcilla": {
+        "role": "tertiary",
+        "displayName": "Arcilla Glaze",
+        "canonical": "#b27a56",
+        "tonalRamp": [
+          "#200000",
+          "#421400",
+          "#623109",
+          "#834f2b",
+          "#a9724e",
+          "#d09671",
+          "#f7bc96",
+          "#ffe2c2"
+        ]
+      },
+      "glaze-carbon": {
+        "role": "tertiary",
+        "displayName": "Carbón Glaze",
+        "canonical": "#2f2c29",
+        "tonalRamp": [
+          "#0d0b08",
+          "#262321",
+          "#423f3c",
+          "#605d5a",
+          "#837f7c",
+          "#a8a4a0",
+          "#cecac6",
+          "#f2eeea"
+        ]
+      },
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "#f3f0ea",
+        "tonalRamp": [
+          "#0d0b07",
+          "#26241f",
+          "#423f3b",
+          "#605d58",
+          "#83807a",
+          "#a7a49f",
+          "#cdcac4",
+          "#f1eee8"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#fbfaf7",
+        "tonalRamp": [
+          "#0c0b09",
+          "#252422",
+          "#40403d",
+          "#5e5d5b",
+          "#81807d",
+          "#a5a4a2",
+          "#cbcac7",
+          "#efeeeb"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#4f4a44",
+        "tonalRamp": [
+          "#0e0a06",
+          "#28231e",
+          "#443f39",
+          "#625d56",
+          "#857f79",
+          "#a9a49d",
+          "#cfc9c2",
+          "#f4ede6"
+        ]
+      },
+      "stone": {
+        "role": "neutral",
+        "displayName": "Stone",
+        "canonical": "#a7a196",
+        "tonalRamp": [
+          "#0f0a04",
+          "#28231b",
+          "#443f36",
+          "#625d53",
+          "#857f75",
+          "#aaa499",
+          "#d0cabe",
+          "#f4eee2"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d9d3c8",
+        "tonalRamp": [
+          "#0f0b04",
+          "#28231b",
+          "#443f36",
+          "#625d53",
+          "#858075",
+          "#aaa499",
+          "#d0cabf",
+          "#f4eee2"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Fired Red",
+        "canonical": "#9b3b2a",
+        "tonalRamp": [
+          "#220000",
+          "#440e05",
+          "#6a271b",
+          "#924233",
+          "#ba6454",
+          "#dc8d7d",
+          "#fdb7a8",
+          "#ffded0"
+        ]
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Sage (defined, unused)",
+        "canonical": "#6f7f62",
+        "tonalRamp": [
+          "#050f00",
+          "#1c290f",
+          "#37452a",
+          "#546347",
+          "#768669",
+          "#9aab8d",
+          "#c0d1b2",
+          "#e3f6d5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "First-viewport headline only."
+      },
+      "headline": {
+        "displayName": "Stage Headline",
+        "purpose": "Story stage headlines."
+      },
+      "headline-section": {
+        "displayName": "Section Headline",
+        "purpose": "El taller and La colección headlines."
+      },
+      "accent": {
+        "displayName": "Poetic Accent",
+        "purpose": "Instrument Serif italic, one word or short noun phrase per h1/h2, via em."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product name in the product dialog."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Stage subheads and section intros, 30-46ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions and general copy."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Buttons and chips."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, legends, metadata, footer copy."
+      }
+    },
+    "shadows": [
+      {
+        "name": "header-hairline",
+        "value": "0 1px 0 var(--color-line)",
+        "purpose": "Solid header bottom edge after the story."
+      },
+      {
+        "name": "float",
+        "value": "0 2px 10px rgb(27 26 23 / 0.12)",
+        "purpose": "Add-to-cart circle over a product photo."
+      },
+      {
+        "name": "toast",
+        "value": "0 8px 24px rgb(27 26 23 / 0.2)",
+        "purpose": "Floating confirmation pill."
+      },
+      {
+        "name": "ghost-ring",
+        "value": "inset 0 0 0 1px currentColor",
+        "purpose": "Ghost button outline that follows text color."
+      },
+      {
+        "name": "dialog-backdrop",
+        "value": "rgb(27 26 23 / 0.45)",
+        "purpose": "Backdrop behind the cart sheet and modals."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Button press, sheet and modal entrances."
+      },
+      {
+        "name": "state",
+        "value": "180ms ease",
+        "purpose": "Button background and color changes; fields use 150ms."
+      },
+      {
+        "name": "press",
+        "value": "scale(0.98)",
+        "purpose": "Every button on :active."
+      },
+      {
+        "name": "sheet-in",
+        "value": "420ms ease-out-expo, from translate 2rem 0, opacity 0.4",
+        "purpose": "Cart sheet entrance (no-preference only)."
+      },
+      {
+        "name": "modal-in",
+        "value": "380ms ease-out-expo, from translate 0 1rem, scale 0.985, opacity 0.4",
+        "purpose": "Modal entrance (no-preference only)."
+      },
+      {
+        "name": "reveal",
+        "value": "view() timeline, entry 5% to cover 28%, from opacity 0 translate 0 2.5rem",
+        "purpose": "Section and catalogue item reveal."
+      },
+      {
+        "name": "reveal-img",
+        "value": "view() timeline, entry 0% to cover 40%, clip inset(12% 8% round 1.25rem) and scale 1.08 to full",
+        "purpose": "Photograph reveal."
+      },
+      {
+        "name": "panel-copy",
+        "value": "view(block 9% 0%) desktop, view(block 52% 0%) mobile, exit 0% to 70%, fade to 0",
+        "purpose": "Stage copy fades before passing under the header or vase."
+      },
+      {
+        "name": "stage-seam",
+        "value": "6svh linear-gradient(var(--from), var(--to)) at top -3svh",
+        "purpose": "Feather between consecutive stage grounds."
+      },
+      {
+        "name": "vase-scrub",
+        "value": "form 0.08-0.4, glaze 0.4-0.55, wheel out 0.55-0.68, kiln glow 0.63-0.88, plinth 0.86-0.96 of story progress",
+        "purpose": "Scroll-scrubbed Three.js vase; renders finished (p=1) under reduced motion."
+      },
+      {
+        "name": "card-zoom",
+        "value": "700ms ease-out, scale 1.03",
+        "purpose": "Product photo on card hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "40rem"
+      },
+      {
+        "name": "md",
+        "value": "48rem"
+      },
+      {
+        "name": "lg",
+        "value": "64rem"
+      },
+      {
+        "name": "xl",
+        "value": "80rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single black pill action per view.",
+      "html": "<button class=\"ds-btn-primary\">Ver la colección</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.875rem; padding: 0 1.4rem; border: 0; border-radius: 999px; font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; font-weight: 500; font-size: 0.9375rem; letter-spacing: -0.005em; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1); background: var(--color-ink); color: var(--color-bone); } .ds-btn-primary:hover { background: #34312c; } .ds-btn-primary:active { transform: scale(0.98); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary step: currentColor ring, faint ink wash on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Ver piezas en salvia <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 2.875rem; padding: 0 1.4rem; border: 0; border-radius: 999px; font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; font-weight: 500; font-size: 0.9375rem; letter-spacing: -0.005em; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, transform 180ms cubic-bezier(0.16, 1, 0.3, 1); background: transparent; color: var(--color-ink); box-shadow: inset 0 0 0 1px currentColor; } .ds-btn-ghost:hover { background: rgb(27 26 23 / 0.06); } .ds-btn-ghost:active { transform: scale(0.98); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Paper field, hairline border, 0.6rem radius; fired-red error state.",
+      "html": "<div class=\"ds-field-wrap\"><label class=\"ds-label\" for=\"ds-email\">Correo electrónico</label><input id=\"ds-email\" class=\"ds-field\" type=\"email\" placeholder=\"tu@correo.es\"><input class=\"ds-field\" aria-invalid=\"true\" value=\"sin-arroba\" aria-label=\"Correo con error\"><p class=\"ds-err\">Escribe un correo válido.</p></div>",
+      "css": ".ds-field-wrap { display: grid; gap: 0.5rem; max-width: 22rem; font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-label { font-size: 0.875rem; font-weight: 500; color: var(--color-ink); } .ds-field { width: 100%; min-height: 2.875rem; padding: 0.6rem 0.85rem; border: 1px solid var(--color-line); border-radius: 0.6rem; background: var(--color-paper); color: var(--color-ink); font: inherit; transition: border-color 150ms ease; } .ds-field:hover { border-color: var(--color-stone); } .ds-field:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 1px; border-color: var(--color-ink); } .ds-field[aria-invalid=\"true\"] { border-color: #9b3b2a; } .ds-err { margin: 0; font-size: 0.875rem; color: #9b3b2a; }"
+    },
+    {
+      "name": "Glaze Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pill radio chip with optional glaze swatch; ink fill when selected.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-g\" checked><span><i class=\"ds-sw ds-sw-piedra\"></i>Piedra</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-g\"><span><i class=\"ds-sw ds-sw-salvia\"></i>Salvia</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"ds-g\"><span><i class=\"ds-sw ds-sw-arcilla\"></i>Arcilla</span></label></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-chip { position: relative; cursor: pointer; } .ds-chip input { position: absolute; inset: 0; opacity: 0; cursor: pointer; margin: 0; } .ds-chip span { display: flex; align-items: center; gap: 0.5rem; min-height: 2.5rem; padding: 0 1rem 0 0.625rem; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--color-line); color: var(--color-ink); font-size: 0.9375rem; transition: background-color 150ms, color 150ms, box-shadow 150ms; } .ds-chip:hover span { box-shadow: inset 0 0 0 1px var(--color-stone); } .ds-chip input:checked + span { background: var(--color-ink); color: var(--color-bone); box-shadow: inset 0 0 0 1px var(--color-ink); } .ds-chip input:focus-visible + span { outline: 2px solid var(--color-ink); outline-offset: 2px; } .ds-sw { display: block; width: 1.25rem; height: 1.25rem; border-radius: 999px; box-shadow: inset 0 0 0 1px rgb(27 26 23 / 0.15); } .ds-sw-piedra { background: #a7a196; } .ds-sw-salvia { background: #8d9d7f; } .ds-sw-arcilla { background: #b27a56; }"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "chrome",
+      "description": "Fixed 3.5rem header: lowercase wordmark, pill-hover links, paper cart pill. Shown in its chrome-solid state.",
+      "html": "<header class=\"ds-chrome\"><a class=\"ds-mark\" href=\"#\">terra</a><nav class=\"ds-nav\"><a href=\"#\">Colección</a><a href=\"#\">El taller</a><button class=\"ds-cart\" aria-label=\"Carrito, 2 piezas\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8z\"/><path d=\"M9 10V7a3 3 0 0 1 6 0v3\"/></svg><span>2</span></button></nav></header>",
+      "css": ".ds-chrome { display: flex; align-items: center; justify-content: space-between; height: 3.5rem; padding: 0 2.5rem; background: var(--color-bone); box-shadow: 0 1px 0 var(--color-line); color: var(--color-ink); font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; } .ds-mark { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.03em; color: inherit; text-decoration: none; } .ds-nav { display: flex; align-items: center; gap: 0.25rem; font-size: 0.875rem; } .ds-nav a { display: flex; align-items: center; min-height: 2.75rem; padding: 0 0.75rem; border-radius: 999px; color: inherit; text-decoration: none; } .ds-nav a:hover { background: rgb(27 26 23 / 0.05); } .ds-cart { display: flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0 1rem; border: 0; border-radius: 999px; background: var(--color-paper); color: var(--color-ink); box-shadow: inset 0 0 0 1px rgb(27 26 23 / 0.1); font: inherit; font-variant-numeric: tabular-nums; cursor: pointer; } .ds-cart:hover { background: var(--color-bone); } .ds-chrome :focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "4:5 photo in a paper well, floating add circle, name, glaze swatch and tabular price.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-img\"><div class=\"ds-ph\"></div><button class=\"ds-add\" aria-label=\"Añadir al carrito\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></button></div><div class=\"ds-card-meta\"><div><h3>Cuenco Alba</h3><p><i class=\"ds-dot\"></i>Hueso</p></div><p class=\"ds-price\">28,00 €</p></div></article>",
+      "css": ".ds-card { width: 16rem; font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; color: var(--color-ink); } .ds-card-img { position: relative; overflow: hidden; border-radius: 1rem; background: var(--color-paper); } .ds-ph { aspect-ratio: 4 / 5; background: #e7e1d4; transition: transform 700ms ease-out; } .ds-card:hover .ds-ph { transform: scale(1.03); } .ds-add { position: absolute; right: 0.75rem; bottom: 0.75rem; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 0; border-radius: 999px; background: rgb(251 250 247 / 0.9); color: var(--color-ink); box-shadow: 0 2px 10px rgb(27 26 23 / 0.12); cursor: pointer; transition: background-color 150ms, color 150ms; } .ds-add:hover { background: var(--color-ink); color: var(--color-bone); } .ds-add:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; } .ds-card-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; margin-top: 0.75rem; } .ds-card-meta h3 { margin: 0; font-size: 1rem; font-weight: 500; } .ds-card-meta p { margin: 0.125rem 0 0; display: flex; align-items: center; gap: 0.375rem; font-size: 0.875rem; color: var(--color-ink-soft); } .ds-dot { width: 0.75rem; height: 0.75rem; border-radius: 999px; background: #e7e1d4; box-shadow: inset 0 0 0 1px rgb(27 26 23 / 0.15); } .ds-card-meta .ds-price { margin: 0; font-weight: 500; color: var(--color-ink); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Toast",
+      "kind": "custom",
+      "refersTo": "toast",
+      "description": "Floating ink pill confirming an add to cart.",
+      "html": "<p class=\"ds-toast\" role=\"status\">Cuenco Alba añadido al carrito</p>",
+      "css": ".ds-toast { display: inline-block; margin: 0; padding: 0.75rem 1.25rem; border-radius: 999px; background: var(--color-ink); color: var(--color-bone); font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; box-shadow: 0 8px 24px rgb(27 26 23 / 0.2); }"
+    },
+    {
+      "name": "Kiln Stage",
+      "kind": "custom",
+      "refersTo": "stage-3",
+      "description": "Signature stage ground: kiln black under ember radials, headline with one serif italic word.",
+      "html": "<section class=\"ds-stage\"><h2>A 1.240 °C, el barro se vuelve <em>piedra</em>.</h2><p>Doce horas de cocción y otras doce de enfriado.</p></section>",
+      "css": ".ds-stage { min-height: 22rem; display: flex; flex-direction: column; justify-content: center; padding: 2.5rem; color: var(--color-bone); font-family: \"Geist Variable\", ui-sans-serif, system-ui, sans-serif; background: radial-gradient(120% 60% at 72% 100%, rgb(150 58 18 / 0.55), transparent 62%), radial-gradient(60% 40% at 72% 92%, rgb(232 120 48 / 0.35), transparent 70%), var(--color-kiln); } .ds-stage h2 { margin: 0; max-width: 18ch; font-size: clamp(2rem, 4.6vw, 3.5rem); font-weight: 600; line-height: 1.05; letter-spacing: -0.03em; text-wrap: balance; } .ds-stage em { font-family: \"Instrument Serif\", ui-serif, Georgia, serif; font-style: italic; font-weight: 400; letter-spacing: 0; } .ds-stage p { margin: 1.25rem 0 0; max-width: 34ch; font-size: 1.125rem; color: rgb(243 240 234 / 0.75); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Workshop Played Back",
+    "overview": "Terra is a ceramics workshop's process, run forward by the scroll. One handmade vase is thrown, glazed and fired in front of the visitor on a sticky Three.js stage, while each phase of the process owns the whole viewport with its own solid ground: raw clay, pale wheel slip, sage glaze, kiln black with ember, and finally the bone-colored table where the shop begins. Below the story, the shop is calm, Apple-like UI: warm mineral neutrals, black pill buttons, hairline rules and generous air.\n\nThe system is matte, never glossy. Color comes from the material world (clay, stone, sage, glaze, fire) and is kept restrained; the type scale is moderate and tightly tracked, with one Instrument Serif italic accent per headline carrying the poetic word. Motion is scrubbed and continuous: the scroll drives it, nothing loops on a timer, and everything reads fully when motion is reduced or WebGL is missing.",
+    "keyCharacteristics": [
+      "Full-viewport stage grounds per story phase, joined by a short 6svh feathered seam.",
+      "Warm mineral neutrals with black ink as the only strong UI color.",
+      "Geist Variable, semibold and tightly tracked, with one serif italic accent per headline.",
+      "Pills for every action and choice; softly rounded fields; 1px hairline rules.",
+      "Scroll-scrubbed 3D vase and CSS scroll-driven reveals, all with static fallbacks."
+    ],
+    "rules": [
+      {
+        "name": "The Ground Owns the Viewport Rule",
+        "body": "Each story phase is one solid ground filling the whole screen at rest. Blending happens only in a 6svh seam straddling the boundary (3svh above, 3svh below), so contrast is decided per panel and holds without JavaScript.",
+        "section": "colors"
+      },
+      {
+        "name": "The Matte Rule",
+        "body": "UI surfaces are flat fills: no gradients on buttons, cards, fields or dialogs, no glass, no gloss. The kiln's ember radials are a stage ground, part of the world's fire, and are the one sanctioned gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Glaze Is Data Rule",
+        "body": "Glaze colors come from the catalogue and are shared by the 3D vase and the swatches; a glaze is never shown as color alone, always with its name.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Poetic Word Rule",
+        "body": "Every h1 and h2 headline carries exactly one Instrument Serif italic accent (an `em`, weight 400, no tracking): one word, or at most a two-word noun phrase. Never two accents in a headline, never the serif in body or UI.",
+        "section": "typography"
+      },
+      {
+        "name": "The Moderate Scale Rule",
+        "body": "Nothing exceeds 4.75rem. Size is not the drama; the stage grounds and the vase are.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Lift Rule",
+        "body": "Raise a surface by moving it from bone to paper, not by adding a shadow. Shadows are reserved for elements that float over imagery or the page (add button, toast).",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give each story phase one solid ground that fills the viewport, feathered into the next only through the 6svh seam.",
+      "Do use ink for the single primary action in a view, as a pill 2.875rem tall.",
+      "Do put exactly one Instrument Serif italic word (or short noun phrase) in each headline.",
+      "Do raise surfaces by moving from bone to paper, and divide with 1px hairlines.",
+      "Do drive motion from scroll position, and ship a finished, still, fully readable state for reduced motion and no WebGL.",
+      "Do show every glaze with its name next to the swatch.",
+      "Do use tabular numerals for prices, counts and quantities."
+    ],
+    "donts": [
+      "Don't put gradients, glass or gloss on UI surfaces; the kiln ember radial belongs to the stage ground only.",
+      "Don't set headlines above 4.75rem or use loud, clashing color; the palette stays earth, stone, sage, warm neutrals and black.",
+      "Don't use the serif italic in body copy, UI or more than once per headline.",
+      "Don't use stone for text; it is a ring and hover color only.",
+      "Don't run time-triggered looping animation; motion is scrubbed by the scroll.",
+      "Don't use square corners on actions or choices; they are pills."
+    ]
+  }
+}
